@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*CSS Reset End*/
+
+:root {
+    --purple: #8A82CC ;
+    --pink: #FFA782 ;
+    --yellow: #F5D105;
+    --blue: #559AC8;
+}
+
+/*文字*/
+.text-white {
+    color: white;
+}
+.text-purple {
+    color: var(--purple);
+}
+.text-pink {
+    color: var(--pink);
+}
+.text-yellow {
+    color: var(--yellow);
+}
+.text-blue {
+    color: var(--blue);
+}
+
+
+
+/*背景*/
+.bg-white {
+    background-color: #fff;
+}
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-pink {
+    background-color: var(--pink);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+
+/*排版*/
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+.position-fixed {
+    position:fixed;
+}
+.ml-1 {
+    margin-left: 1px;
+}
+.ml-2 {
+    margin-left: 2px;
+}
+.ml-4 {
+    margin-left: 4px;
+}
+
+
+.wrap {
+    width: 1024px;
+    margin: 0 auto;
+}
+.wrap .goTop{
+    bottom:0px;
+    right:0px;
+    cursor: pointer;
+}
+/*表頭*/
+.header {
+    background-image: url(images/Hero.png);
+    background-size: cover;
+    text-align: center;
+    height:360px;
+}
+.header h1 {
+    padding: 60px 0px;
+    font-size: 40px;
+}
+.header .areaSelect {
+    padding: 10px 5px;
+    width: 450px;
+    border: 3px solid #fff;
+    border-radius: 3px;
+    appearance: none;
+    background: url(https://upload.cc/i1/2021/07/05/4uoJjW.png) no-repeat 95% 50% transparent;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.hotArea {
+    text-align: left;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-radius: 5px;
+    padding: 20px 20px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2) 
+}
+.hotArea .hotList {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.hotArea .hotList .hotBtn {
+    padding: 10px;
+    width: 130px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: none;
+    color:white;
+    font-size: 20px;
+    opacity: 0.8;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.hotArea .hotList .hotBtn:hover{
+    opacity: 1;
+}
+section {
+    width: 900px;
+    margin: 140px auto 80px auto;
+}
+section div {
+    border-top: 1px dashed var(--blue);
+}
+section div i {
+    right: 50%;
+    top:-12px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    padding: 0px 4px;
+}
+
+.content {
+    padding: 20px;
+}
+.content h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.content .filterList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .filterList .filterItem {
+    margin: 10px;
+    width: 464px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+.content .filterList .filterItem .picArea {
+    background-image: url("https://khh.travel/image/19962/640x480");
+    height: 155px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+}
+.content .filterList .filterItem .detail {
+    padding: 20px;
+    font-size: 16px;
+    line-height: 28px;
+}
+.content .filterList .filterItem .detail li {
+
+}
+.content .filterList .filterItem .detail img {
+    vertical-align: sub;
+}
+.content .filterList .filterItem .detail .info {
+    margin-left: 10px;
+}
+.content .filterList .filterItem .detail .tag {
+    right: 20px;
+    bottom:20px;
+    font-size: 19px;
+    cursor: url(https://cur.cursors-4u.net/others/oth-6/oth638.cur),auto !important;
+}
+.content .filterList .filterItem .detail .tag .tag-img {
+    vertical-align: sub;
+    margin-right: 5px;
+}
+
+
+.pageList {
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: black;
+    padding: 40px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.pageList i {
+    pointer-events: none;
+}
+.pageList li{
+    padding: 5px 10px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--blue);
+    opacity: 0.8;
+}
+.pageList li:hover{
+    background-color: var(--blue);
+    color:honeydew;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.pageList .active {
+    background-color: var(--blue);
+    color:honeydew;
+    opacity: 1;
+    cursor: auto;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.pageList .disabled {
+    
+}
+
+.footer{
+    padding: 20px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 14px;
+}
+.footer a {
+    text-decoration: none;
+    opacity: 0.8;
+}
+.footer a:hover {
+    opacity: 1;
+}

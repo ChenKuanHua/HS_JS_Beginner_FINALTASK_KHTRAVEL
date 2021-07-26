@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
+    <link rel="stylesheet" href="all.css">
+    <title>六角－高雄旅遊網</title>
+</head>
+<body>
+    <div class="wrap">
+        <div id="top" class="header">
+            <h1 class="text-white">高雄旅遊資訊</h1>
+            <select name="area" class="areaSelect">
+                <option value="null" disabled selected> - -請選擇行政區- - </option>
+            </select>
+            <div class="hotArea bg-white">
+                <h3>熱門行政區</h3>
+                <ul class="hotList">
+                    <li><button class="hotBtn bg-purple">苓雅區</button></li>
+                    <li><button class="hotBtn bg-pink">三民區</button></li>
+                    <li><button class="hotBtn bg-yellow">新興區</button></li>
+                    <li><button class="hotBtn bg-blue">鹽埕區</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <div class="position-relative"><i class="bg-white position-absolute fas fa-caret-down text-blue"></i></div>
+        </section>
+
+        <div class="content position-relative">
+            <h2 class="listTitle text-purple"><img class="loading" src="images/loading.gif" alt="loading"></h2>
+            <ul class="filterList">
+            </ul>
+            <a class="goTop position-absolute" href="#top"><img src="images/btn_goTop.png" alt="go top"></a>
+        </div>
+
+        <ul class="pageList"></ul>
+
+
+        <div class="footer bg-blue">
+            <p class="text-white">高雄旅遊網</p>
+            <p><a class="text-yellow" href="#">資料來源：高雄市政府</a></p>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="all.js"></script>
+</body>
+</html>
