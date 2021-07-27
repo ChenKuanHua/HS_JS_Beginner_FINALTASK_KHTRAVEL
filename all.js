@@ -127,19 +127,21 @@ function renderItem(item){
 function makePageBtn(data, currentPage) {
     // 計算共需幾頁，就製作幾個按鈕
     const totalPage = Math.ceil(data.length / perPage);
-    console.log(`總共${data.length}筆資料，每頁${perPage}筆，共需${totalPage}個頁按鈕`);
+    // console.log(`總共${data.length}筆資料，每頁${perPage}筆，共需${totalPage}個頁按鈕`);
 
     
-    // 如果使用者一按上一下或下一頁，判斷是否有超過或小於總頁數
+    // 如果使用者一直按上一頁或下一頁，判斷是否有超過或小於總頁數
     let next = parseInt(currentPage) + 1;
     let prev = parseInt(currentPage) - 1;
     if (parseInt(currentPage) <= 1){ prev = 1};
     if (parseInt(currentPage) >= totalPage){next = totalPage};
     
+    // 按鈕容器
     let str = '';
+
     // 上一頁按鈕
     str = `<li href="#" data-page="${prev}" data-curPage="${currentPage}"><i class="fas fa-long-arrow-alt-left"></i></li>`;
-    // 中間的按鈕
+    // 中間的按鈕們
     for (let i=0; i<totalPage; i++) {
         str += `<li data-page=${i+1}>${i+1}</li>`;
     };
@@ -174,15 +176,18 @@ function getOnePageData(data, goPage){
     return onePageData;
 }
 
-// 分頁功能 3：拿到使用者按下第幾頁，丟給分頁功能 2，拿到該頁面的資料
+// 整合分頁功能：當監聽到使用者按下第幾頁
+// 把頁碼給分頁功能1去製作按鈕 和 給分頁功能2拿該頁面的資料
+// 最後渲染出畫面
 function changePage(e){
     if(e.target.nodeName !== 'LI') return;
+    // console.log(e.target.nodeName)
     let filterData;
     let str = '';
     e.preventDefault();
     if (e.target.dataset.page) {
-        if(e.target.dataset.page >= 0) return;
-        console.log(`點了 第${e.target.dataset.page}頁`);
+        if(e.target.dataset.page <= 0) return;
+        // console.log(`點了 第${e.target.dataset.page}頁`);
         const page = e.target.dataset.page;
         // 製作按鈕
         makePageBtn(data, page);
@@ -197,7 +202,7 @@ function changePage(e){
 
 }
 
-//監聽每個按鈕，指定頁數給每個按鈕
+//監聽分頁按鈕
 pageList.addEventListener("click", changePage, false);
 //監聽區域按鈕
 btnList.addEventListener("click", getList, false)
